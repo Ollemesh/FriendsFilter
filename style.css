@@ -145,11 +145,12 @@ body {
 }
 
 .friendItem_button {
-    position: absolute;
+    position: relative;
     top: 10px;
     right: 5px;
 
     display: inline-block;
+    float: right;
 
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
@@ -160,10 +161,14 @@ body {
 
     text-rendering: auto;
 }
-.right-column_list .friendItem_button:before {
+
+.right-column_list .friendItem_button:before,
+[data-container="right"] .friendItem_button:before {
     content: "\f00d";
 }
-.left-column_list .friendItem_button:before {
+
+.left-column_list .friendItem_button:before,
+[data-container="left"] .friendItem_button:before {
     content: "\f067";
 }
 
